@@ -1,0 +1,14 @@
+{
+  "name": "drupal/timber_fcustom",
+  "type": "drupal-module",
+  "description": "Alter form by using this custom module.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/timber_fcustom",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/timber_fcustom",
+    "source": "http://cgit.drupalcode.org/timber_fcustom"
+  },
+  "require": { }
+}

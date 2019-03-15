@@ -1,0 +1,289 @@
+<?php
+
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Asset\AttachedAssetsInterface;
+
+/**
+ * @file
+ * Functions to support theming in the timber theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function timber_preprocess_html(array &$variables) { 
+  global $base_url;
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  $variables['theme_path'] = base_path().drupal_get_path('theme', $theme);
+  $site_name = \Drupal::config('system.site')->get('name');
+  $variables['site_name'] = $site_name;
+  $variables['copyright_text'] = theme_get_setting('copyright_text', $theme);
+  $variables['base_path'] = base_path();
+
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function timber_page_attachments_alter(array &$page) {
+  // Tell IE to use latest rendering engine (not to use compatibility mode).
+  /*$ie_edge = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+    'http-equiv' => 'X-UA-Compatible',
+    'content' => 'IE=edge',
+    ],
+  ];
+  $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
+}
+
+/**
+ * Implements hook_preprocess_page() for page.html.twig.
+ */
+function timber_preprocess_page(array &$variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function timber_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function timber_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  /*$node = $variables['elements']['#node'];
+
+  if ($variables['elements']['#view_mode'] == "full") {
+
+  }*/
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for Block document templates.
+ */
+function timber_preprocess_block(array &$variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function timber_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  /*$element = $variables['element'];
+  $suggestions[] = 'field__' . $element['#view_mode'];
+  $suggestions[] = 'field__' . $element['#view_mode'] . '__' . $element['#field_name'];*/
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function timber_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+  /*$element = $variables['element'];
+  if (isset($element['#attributes']['class']) && in_array('form-composite', $element['#attributes']['class'])) {
+    $suggestions[] = 'fieldset__form_composite';
+  }*/
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function timber_preprocess_node(array &$variables) {
+  // Default to turning off byline/submitted.
+  //$variables['display_submitted'] = FALSE;
+
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function timber_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function timber_preprocess_form(array &$variables) {
+  //$variables['attributes']['novalidate'] = 'novalidate';
+}
+
+/**
+ * Implements hook_preprocess_select().
+ */
+function timber_preprocess_select(array &$variables) {
+  //$variables['attributes']['class'][] = 'select-chosen';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function timber_preprocess_field(array &$variables, $hook) {
+  /*switch ($variables['element']['#field_name']) {
+  }*/
+}
+
+/**
+ * Implements hook_preprocess_details().
+ */
+function timber_preprocess_details(array &$variables) {
+  /*$variables['attributes']['class'][] = 'details';
+  $variables['summary_attributes']['class'] = 'summary';*/
+}
+
+/**
+ * Implements hook_theme_suggestions_details_alter().
+ */
+function timber_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_menu_local_task().
+ */
+function timber_preprocess_menu_local_task(array &$variables) {
+  //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function timber_preprocess(&$variables){
+
+  global $base_url;
+  $theme_path = drupal_get_path('theme', 'timber');
+
+  //Setting header.
+  $text_one = theme_get_setting('text_one', 'timber');
+  if(isset($text_one) && !empty($text_one)){
+    $variables['text_one'] = $text_one;
+  }else{
+    $variables['text_one'] = '';
+  }
+  $text_two = theme_get_setting('text_two', 'timber');
+  if(isset($text_two) && !empty($text_two)){
+    $variables['text_two'] = $text_two;
+  }else{
+    $variables['text_two'] = '';
+  }
+  $text_three = theme_get_setting('text_three', 'timber');
+  if(isset($text_three) && !empty($text_three)){
+    $variables['text_three'] = $text_three;
+  }else{
+    $variables['text_three'] = '';
+  }
+
+  //General layout
+  if(!empty(theme_get_setting('page_header_bg', 'timber'))){
+    $variables['page_header_bg'] = $base_url .theme_get_setting('page_header_bg', 'timber');
+    //echo $variables['page_header_bg'];exit;
+  }else{
+    $variables['page_header_bg'] = '';
+  }
+
+  //contact
+  $contact_address = theme_get_setting('contact_address', 'timber');
+  if(isset($contact_address) && !empty($contact_address)){
+    $variables['contact_address'] = $contact_address;
+  }
+  $contact_title = theme_get_setting('contact_title', 'timber');
+  if(isset($contact_title) && !empty($contact_title)){
+    $variables['contact_title'] = $contact_title;
+  }
+  $contact_subtitle = theme_get_setting('contact_subtitle', 'timber');
+  if(isset($contact_subtitle) && !empty($contact_subtitle)){
+    $variables['contact_subtitle'] = $contact_subtitle;
+  }
+  $contact_email = theme_get_setting('contact_email', 'timber');
+  if(isset($contact_email) && !empty($contact_email)){
+    $variables['contact_email'] = $contact_email;
+  }
+  $contact_phone = theme_get_setting('contact_phone', 'timber');
+  if(isset($contact_phone) && !empty($contact_phone)){
+    $variables['contact_phone'] = $contact_phone;
+  }
+  $contact_skype = theme_get_setting('contact_skype', 'timber');
+  if(isset($contact_skype) && !empty($contact_skype)){
+    $variables['contact_skype'] = $contact_skype;
+  }
+  $contact_twitter = theme_get_setting('contact_twitter', 'timber');
+  if(isset($contact_twitter) && !empty($contact_twitter)){
+    $variables['contact_twitter'] = $contact_twitter;
+  }
+  $contact_facebook = theme_get_setting('contact_facebook', 'timber');
+  if(isset($contact_facebook) && !empty($contact_facebook)){
+    $variables['contact_facebook'] = $contact_facebook;
+  }
+  $contact_flickr = theme_get_setting('contact_flickr', 'timber');
+  if(isset($contact_flickr) && !empty($contact_flickr)){
+    $variables['contact_flickr'] = $contact_flickr;
+  }
+  $contact_youtube = theme_get_setting('contact_youtube', 'timber');
+  if(isset($contact_youtube) && !empty($contact_youtube)){
+    $variables['contact_youtube'] = $contact_youtube;
+  }
+
+    //social
+  $social_title = theme_get_setting('social_title', 'timber');
+  if(isset($social_title) && !empty($social_title)){
+    $variables['social_title'] = $social_title;
+  }
+  $social_subtitle = theme_get_setting('social_subtitle', 'timber');
+  if(isset($social_subtitle) && !empty($social_subtitle)){
+    $variables['social_subtitle'] = $social_subtitle;
+  }
+  $social_linkedlin = theme_get_setting('social_linkedlin', 'timber');
+  if(isset($social_linkedlin) && !empty($social_linkedlin)){
+    $variables['social_linkedlin'] = $social_linkedlin;
+  }
+  $social_google = theme_get_setting('social_google', 'timber');
+  if(isset($social_google) && !empty($social_google)){
+    $variables['social_google'] = $social_google;
+  }
+  $social_skype = theme_get_setting('social_skype', 'timber');
+  if(isset($social_skype) && !empty($social_skype)){
+    $variables['social_skype'] = $social_skype;
+  }
+  $social_twitter = theme_get_setting('social_twitter', 'timber');
+  if(isset($social_twitter) && !empty($social_twitter)){
+    $variables['social_twitter'] = $social_twitter;
+  }
+  $social_facebook = theme_get_setting('social_facebook', 'timber');
+  if(isset($social_facebook) && !empty($social_facebook)){
+    $variables['social_facebook'] = $social_facebook;
+  }
+  $social_flickr = theme_get_setting('social_flickr', 'timber');
+  if(isset($social_flickr) && !empty($social_flickr)){
+    $variables['social_flickr'] = $social_flickr;
+  }
+  $social_youtube = theme_get_setting('social_youtube', 'timber');
+  if(isset($social_youtube) && !empty($social_youtube)){
+    $variables['social_youtube'] = $social_youtube;
+  }
+
+  $copyright_text = theme_get_setting('copyright_text', 'timber');
+  if(isset($copyright_text) && !empty($copyright_text)){
+    $variables['copyright_text'] = $copyright_text;
+  }
+
+  /*********Load Portfolio Category*/
+  $vid = 'portfolio_category';
+  $pc_term_data = array();
+  $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+  foreach ($terms as $term) {
+   $pc_term_data[] = array(
+    "id" => $term->tid,
+    "name" => $term->name
+   );
+  }
+  if(is_array($pc_term_data) && count($pc_term_data) > 0){
+    $variables['pc_term_data'] = $pc_term_data;
+  }
+}

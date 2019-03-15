@@ -1,0 +1,34 @@
+name: Timber One Page Responsive Template
+type: theme
+description: This is custom theme.
+package: theming
+# core: 8.x
+libraries:
+  - timber/global-styling
+  - timber/timber-styling
+base theme: bootstrap
+regions:
+  top_bar: Top Bar
+  branding: Site Branding
+  navigation: Navigation
+  highlighted: Highlighted
+  content_header: Content Header
+  content: Content
+  about_us: About Us
+  about_left: About Left
+  about_middle: About Middle
+  about_right: About Right
+  project: Project
+  news: News
+  contact: Contact
+  contact_first: Contact First
+  contact_second: Contact Second
+  contact_third: Contact Third
+  primary: Primary
+  secondary: Secondary
+  footer: Footer
+# Information added by Drupal.org packaging script on 2018-05-11
+version: '8.x-5.x-dev'
+core: '8.x'
+project: 'timber'
+datestamp: 1526042904

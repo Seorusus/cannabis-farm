@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Contains timber_fcustom.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function timber_fcustom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the timber_fcustom module.
+    case 'help.page.timber_fcustom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Alter form by using this custom module.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function timber_fcustom_theme() {
+  return [
+    'timber_fcustom' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter() on behalf of timber_fcustom.module.
+ */
+function timber_fcustom_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    // Change form id here  
+  
+    if ($form_id == 'form_test_alter_form') {
+        drupal_set_message('form_test_form_alter() executed.');
+
+    }elseif ($form_id == 'comment_comment_form') {      
+      // Alter login form and add own custom submit handler.
+       $form['actions']['submit']['#submit'][] = '_timber_fcustom_comment_comment_form_submit';
+    }
+}
+
+/**
+ * Custom submit handler for login form.
+ */
+function _timber_fcustom_comment_comment_form_submit($form, FormStateInterface $form_state) {
+
+  // Set redirect to login form.
+  drupal_set_message('Comment send successfully.');
+  $form_state->setRedirect('<front>');
+}
