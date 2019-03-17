@@ -1,0 +1,10 @@
+admin_css: true
+responsive_image: false
+unbreakpoints: false
+one_pixel: true
+extras: {}
+blazy:
+  loadInvisible: false
+  offset: 100
+  saveViewportOffsetDelay: 50
+  validateDelay: 25

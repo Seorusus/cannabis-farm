@@ -1,0 +1,44 @@
+
+Slick 8.x-2.0-dev, 2019-03-15
+-----------------------------
+- Added Slick::loadWithFallback(), and minor fixes.
+
+Slick 8.x-2.0-dev, 2019-03-11
+-----------------------------
+- Added isset check to Slick::getOptions().
+
+Slick 8.x-2.0-beta1, 2019-03-08
+-------------------------------
+- Cleaned up deprecated VEF/ VEM from test files.
+
+Slick 8.x-2.0-dev, 2019-03-07
+-----------------------------
+- Made Slick and Slick UI extensible.
+
+Slick 8.x-2.0-dev, 2019-03-06
+-----------------------------
+- Updated to the latest Blazy change 03-06 with BlazyAdminBase::openingForm().
+- Added hook_slick_build_alter() to modify the entire slick outputs.
+
+Slick 8.x-2.0-dev, 2019-03-01
+-----------------------------
+- Updated to the latest Blazy.
+- Removed SlickMediaFormatterBase as in TODO.
+
+Slick 8.x-2.0-dev, 2019-02-12
+-----------------------------
+- Added weight to Slick library CSS to prevent it from overriding module CSS.
+
+Slick 8.x-2.0-dev, 2019-01-06
+-----------------------------
+- Fixed for dots with thumbnail alt.
+
+Slick 8.x-2.0-dev, 2019-01-04
+-----------------------------
+- Updated README.txt, and minor adjustments.
+
+Slick 8.x-2.0-dev, 2019-01-01
+-----------------------------
+- Added a new dedicated Media integration via SlickMediaFormatterBase.
+- Issue #3023234 by gausarts: Create a new branch for core Media.
+- Initial commit.

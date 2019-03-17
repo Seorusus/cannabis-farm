@@ -1,0 +1,15 @@
+name: Slick Test
+description: 'Testing Slick.'
+type: module
+hidden: true
+package: Testing
+# core: 8.x
+dependencies:
+  - blazy:blazy_test (>= 2.x)
+  - slick:slick (>= 2.x)
+
+# Information added by Drupal.org packaging script on 2019-03-16
+version: '8.x-2.0-beta3'
+core: '8.x'
+project: 'slick'
+datestamp: 1552763017
