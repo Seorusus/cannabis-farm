@@ -8,9 +8,10 @@ libraries:
   - timber/timber-styling
 base theme: bootstrap
 regions:
+  navigation: 'Navigation'
+  top_navigation: 'Navigation (Top bar)'  
   top_bar: Top Bar
   branding: Site Branding
-  navigation: Navigation
   highlighted: Highlighted
   content_header: Content Header
   content: Content

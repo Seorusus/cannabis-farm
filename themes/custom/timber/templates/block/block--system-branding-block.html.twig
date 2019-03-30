@@ -15,7 +15,7 @@
  * @ingroup templates
  */
 #}
-{% block content %}
+{# {% block content %}
   {% if site_logo %}
     <a class="pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
       <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
@@ -23,6 +23,22 @@
   {% endif %}
   {% if site_name %}
     <a class="name navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+  {% endif %}
+  {% if site_slogan %}
+    <p class="navbar-text">{{ site_slogan }}</p>
+  {% endif %}
+{% endblock %} #}
+
+{% block content %}
+  {% if site_logo %}
+    <a class="logo" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+      <img width="270" height="auto" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+    </a>
+  {% endif %}
+  {% if site_name %}
+    <span class="sr-only">
+      <a class="name navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+    </span>
   {% endif %}
   {% if site_slogan %}
     <p class="navbar-text">{{ site_slogan }}</p>
