@@ -2,10 +2,11 @@
   <div class="cart-block--summary">
     <a class="cart-block--link__expand" href="{{ url }}">
       <span class="cart-block--summary__icon">
-        <i class="glyph glyph-cart"></i>
+        {#<i class="glyph glyph-cart"></i>#}
+        <img src="{{ base_path ~ directory }}/images/cart_Icon.png" alt="cart">
         <span class="sr-only"></span>
       </span>
-      <span class="cart-block--summary__count">{% trans %}Cart{% endtrans %} / {{ count_text }}</span>
+      <span class="cart-block--summary__count">{{ count_text }}</span>
     </a>
   </div>
   {% if content %}

@@ -2035,7 +2035,7 @@ body{
 
 @media (min-width: 768px) {
     .navbar {
-    border-radius: 4px;
+    border-radius: 0px;
     }
 }
 
@@ -2044,5 +2044,36 @@ body{
     min-height: 60px;
     margin-bottom: 0;
     border: 1px solid transparent;
+}
+
+/* Cart block theming */
+.cart-block--summary__icon img {
+  width: 38px;
+  opacity: 0.6;
+}
+
+.cart-block--summary__icon img:hover {
+  opacity: 0.8;
+}
+
+.cart-block--summary__icon:hover {
+  color: #C1C1C1;
+}
+
+.cart-block--summary {
+  margin-right: 25px;
+}
+
+.cart-block--summary a {
+  color: #777;
+}
+
+.cart-block--summary a:hover {
+  color: #C1C1C1;
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #C1C1C1;
 }
 
