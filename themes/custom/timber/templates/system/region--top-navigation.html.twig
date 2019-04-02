@@ -1,0 +1,8 @@
+{% extends 'region.html.twig' %}
+
+{% block region_content %}
+  <div class="container test">
+    {{ drupal_entity('block_content', infocontacts) }}
+    {{ parent() }}
+  </div>
+{% endblock %}
