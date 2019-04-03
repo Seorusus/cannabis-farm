@@ -42,6 +42,8 @@
   <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
 
   {% block content %}
-    {{ content }}
+    <div class="block-useraccountmenu-menu">
+      {{ content }}
+    </div>
   {% endblock %}
 </nav>
