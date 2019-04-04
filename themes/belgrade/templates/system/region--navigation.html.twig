@@ -4,6 +4,7 @@
     <button type="button" class="close-btn" data-toggle="collapse" data-target="#off-canvas" aria-expanded="false">
       <span class="sr-only">{{'Close navigation'|t}}</span>
     </button>
+    {{ drupal_entity('block_content', 10) }}
     {{ parent() }}
 
 {% endblock %}

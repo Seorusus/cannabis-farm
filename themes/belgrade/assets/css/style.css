@@ -7915,3 +7915,13 @@ p:last-child,
 
 .author {
   margin-bottom: 25px; }
+
+.info-contacts a._telephone, .info-contacts a._email  {
+  color: #777;
+  margin-right: 1vw;
+}
+
+.info-contacts a._telephone:hover, .info-contacts a._email:hover {
+  color: #C1C1C1;
+  text-decoration: none;
+}

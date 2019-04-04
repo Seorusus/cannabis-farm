@@ -3,6 +3,7 @@
 {# Main #}
 {% block main %}
   <div role="main" class="main-container js-quickedit-main-content">
+      {{ drupal_entity('block_content', 10) }}
       {# Off canvas side navigation #}
       {% if page.navigation %}
         <div id="off-canvas" class="side-flyout collapse left">
