@@ -51,7 +51,7 @@
         .text(default_option_label);
       $dropdown.append($default_option);
 
-      $ul.prepend('<li class="default-option"><a href=".">' + default_option_label + '</a></li>');
+      $ul.prepend('<li class="default-option"><a href="">' + default_option_label + '</a></li>');
 
       var has_active = false;
       $links.each(function () {
