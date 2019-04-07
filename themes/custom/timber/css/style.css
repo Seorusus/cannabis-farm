@@ -2099,3 +2099,38 @@ section#block-infocontacts-2 {
   color: #C1C1C1;
   text-decoration: none;
 }
+
+/*  Catalog menu  */
+ul.menu.nav.catalog {
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    text-align-last: justify;
+    height: 100px;
+}
+
+.catalog-menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.catalog-menu li a svg {
+    display: flex;
+    margin: 0 auto 10px;
+    font-size: 40px;
+    color: #008B45;
+}
+
+.catalog-menu li a svg:hover {
+    color: #00CD00;
+}
+
+.catalog-menu li a {
+    color: #008B45;
+}
+
+.catalog-menu li a:hover {
+    color: #00CD00;
+}
