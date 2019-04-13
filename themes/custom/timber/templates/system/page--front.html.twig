@@ -129,24 +129,24 @@
 </div>
 <!--about start-->
 <div id="about">
-    <div class="line2">
-        <div class="container">
-            <div class="row Fresh">
-                <div class="col-md-4 Des">
-                    <i class="fa fa-heart"></i>
-                    {{ page.about_left }}
-                </div>
-                <div class="col-md-4 Ver">
-                    <i class="fa fa-cog"></i>
-                    {{ page.about_middle }}
-                </div>
-                <div class="col-md-4 Fully">
-                    <i class="fa fa-tablet"></i>
-                    {{ page.about_right }}
-                </div>
-            </div>
-        </div>
-    </div>
+    {#<div class="line2">#}
+        {#<div class="container">#}
+            {#<div class="row Fresh">#}
+                {#<div class="col-md-4 Des">#}
+                    {#<i class="fa fa-heart"></i>#}
+                    {#{{ page.about_left }}#}
+                {#</div>#}
+                {#<div class="col-md-4 Ver">#}
+                    {#<i class="fa fa-cog"></i>#}
+                    {#{{ page.about_middle }}#}
+                {#</div>#}
+                {#<div class="col-md-4 Fully">#}
+                    {#<i class="fa fa-tablet"></i>#}
+                    {#{{ page.about_right }}#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
     <div class="container">
         <div class="row">
             {{ page.about_us }}
@@ -161,7 +161,7 @@
             <div class="row Ama">
                 <div class="col-md-12">
                     <span name="projects" id="projectss"></span>
-                    <h3>Our Amazing Works</h3>
+                    <h3>Our Amazing Gallery</h3>
                     <p>Right here we've got something you gonna love</p>
                 </div>
             </div>
@@ -174,23 +174,23 @@
     </div>
 </div>
 <!--news start-->
-<div id="news">
-    <div class="line4">
-        <div class="container">
-            <div class="row Ama">
-                <div class="col-md-12">
-                    <h3>What&rsquo;s New?</h3>
-                    <p>Get the latest news from our blog</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row news">
-            {{ page.news }}
-        </div>
-    </div>
-</div>
+{#<div id="news">#}
+    {#<div class="line4">#}
+        {#<div class="container">#}
+            {#<div class="row Ama">#}
+                {#<div class="col-md-12">#}
+                    {#<h3>What&rsquo;s New?</h3>#}
+                    {#<p>Get the latest news from our blog</p>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="container">#}
+        {#<div class="row news">#}
+            {#{{ page.news }}#}
+        {#</div>#}
+    {#</div>#}
+{#</div>#}
 <!--contact start-->
 <div id="contact">
     <div class="line5">
@@ -205,26 +205,26 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-9 col-xs-12 forma">
+            <div class="col-xs-12 forma">
                 {{ page.contact }}
             </div>
-            <div class="col-md-3 col-xs-12 cont">
-                <ul>
-                    <li><i class="fa fa-home"></i>{{ contact_address }}</li>
-                    <li><i class="fa fa-phone"></i>{{ contact_phone }}</li>
-                    <li><a href="#"><i class="fa fa-envelope"></i>{{ contact_email }}</li></a>
-                    <li><i class="fa fa-skype"></i>{{ contact_skype }}</li>
-                    <li><a href="#"><i class="fa fa-twitter"></i>{{ contact_twitter }}</li></a>
-                    <li><a href="#"><i class="fa fa-facebook-square"></i>{{ contact_facebook }}</li></a>
-                    <li><a href="#"><i class="fa fa-flickr"></i>{{ contact_flickr }}</li></a>
-                    <li><a href="#"><i class="fa fa-youtube-play"></i>{{ contact_youtube }}</li></a>
-                </ul>
-            </div>
+            {#<div class="col-md-3 col-xs-12 cont">#}
+                {#<ul>#}
+                    {#<li><i class="fa fa-home"></i>{{ contact_address }}</li>#}
+                    {#<li><i class="fa fa-phone"></i>{{ contact_phone }}</li>#}
+                    {#<li><a href="#"><i class="fa fa-envelope"></i>{{ contact_email }}</li></a>#}
+                    {#<li><i class="fa fa-skype"></i>{{ contact_skype }}</li>#}
+                    {#<li><a href="#"><i class="fa fa-twitter"></i>{{ contact_twitter }}</li></a>#}
+                    {#<li><a href="#"><i class="fa fa-facebook-square"></i>{{ contact_facebook }}</li></a>#}
+                    {#<li><a href="#"><i class="fa fa-flickr"></i>{{ contact_flickr }}</li></a>#}
+                    {#<li><a href="#"><i class="fa fa-youtube-play"></i>{{ contact_youtube }}</li></a>#}
+                {#</ul>#}
+            {#</div>#}
         </div>
     </div>
-    <div class="line6">
-        {{ page.contact_first }}
-    </div>
+    {#<div class="line6">#}
+        {#{{ page.contact_first }}#}
+    {#</div>#}
     <div class="container">
         <div class="row ftext">
             {{ page.contact_second }}

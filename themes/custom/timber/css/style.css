@@ -646,7 +646,7 @@ body{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 240px; 
+    height: 240px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2133,4 +2133,39 @@ ul.menu.nav.catalog {
 
 .catalog-menu li a:hover {
     color: #00CD00;
+}
+
+.path-frontpage .line3:after,
+.path-frontpage .line5:after {
+    content: "";
+    position: absolute;
+    /* top: 66px; */
+    width: 100%;
+    height: 137%;
+    background: RGBA(0,0,0,0.4);
+    z-index: auto;
+}
+
+.path-frontpage .line7:after {
+    content: "";
+    position: absolute;
+     top: 66px;
+    width: 100%;
+    height: 137%;
+    background: RGBA(0,0,0,0.4);
+    z-index: auto;
+}
+
+.path-frontpage .line7 .footer {
+    position: relative;
+    z-index: 1;
+}
+
+.path-frontpage .Ama {
+    position: relative;
+    z-index: 1;
+}
+
+.path-frontpage .forma {
+    margin-bottom: 20px;
 }
