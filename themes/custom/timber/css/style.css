@@ -2219,3 +2219,33 @@ ul.menu.nav.catalog {
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
 }
+
+.field-content.goods-price {
+    font-size: 30px;
+    color: #008B45;
+    font-weight: 600;
+    width: 100%;
+}
+
+.view-top-product.view-display-id-block_2 .views-row {
+    min-height: 160px;
+}
+
+.view-top-product.view-display-id-block_2 .view-content {
+    border: solid 2px #ccc;
+    padding: 16px;
+}
+
+.view-top-product .views-field-title {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 24px;
+    color: #f07120;
+}
+
+.view-top-product .views-field-title a {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 24px;
+    color: #f07120;
+}
