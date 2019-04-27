@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0abf5c3c-ee89-44ce-ab9b-4f3e7a414f33" name="cannabis-pharm" url="http://appserver.dev.d81a2c4c-3cc9-4ac9-96df-0b53c03e79f0.drush.in">
+        <fileTransfer host="appserver.dev.d81a2c4c-3cc9-4ac9-96df-0b53c03e79f0.drush.in" port="2222" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/srv/bindings/4c53f5cab39b4b0b828f88ab76c01ca9" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
