@@ -7925,3 +7925,24 @@ p:last-child,
   color: #C1C1C1;
   text-decoration: none;
 }
+
+.view-news h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+  color: #f07120;
+  margin: 5px auto;
+  font-weight: 500;
+}
+
+.view-news ul {
+  list-style: none;
+}
+
+.view-news ul svg {
+  margin-right: 10px;
+}
+
+.view-news .use-ajax svg {
+  margin-left: 5px;
+}
