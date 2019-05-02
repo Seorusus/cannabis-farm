@@ -56,7 +56,7 @@ jQuery(document).ready(function () {
 $(document).ready(function () {
     var $menu = $("#menuF");
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100 && $menu.hasClass("default")) {
+        if ($(this).scrollTop() > 50 && $menu.hasClass("default")) {
             $menu.fadeOut('fast', function () {
                 $(this).removeClass("default")
                         .addClass("fixed transbg")
