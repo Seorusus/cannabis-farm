@@ -192,7 +192,7 @@ class DefaultController extends ControllerBase {
       return "Here are the five latest pages from DrupalBot, " . $pages . "You can read one of the Pages by clicking title of the page";
 	}
 	else{
-      return "Sorry We Could not find any pages as of Now! Please try something else."	
+      return "Sorry We Could not find any pages as of Now! Please try something else.";
 	
 	}
 
