@@ -41,7 +41,7 @@ body{
     border-left: 3000px solid transparent;
 }
 .logo{
-    margin-top: 20px;
+    margin-top: 0;
     font-family: 'Roboto', 'sans-serif';
     font-size:30px;
     font-weight:700;
@@ -110,8 +110,7 @@ body{
     padding-right:0px;
 }
 #menu{
-    //margin-top: 33px;
-    margin-top: 33px;
+    margin-top: 18px;
     float: right;
 }
 #menu li a{
@@ -124,7 +123,7 @@ body{
     color:#1fcdff;
 }
 .gallery {
-    height:500px;
+    height:100vh;
 }
 #camera_wrap_1{
     margin-bottom:0 !important;
@@ -637,6 +636,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: none;
 }
 .line3:after{
     content: "";
@@ -1069,6 +1069,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: none;
 }
 .line5:after{
     content: "";
@@ -2182,7 +2183,8 @@ ul.menu.nav.catalog {
 
 #block-catalog:before,
 #block-themostpopulargoods:before,
-#block-views-block-top-product-block-3:before {
+#block-views-block-top-product-block-3:before,
+#block-views-block-portfolio-block-1:before {
     content: "";
     position: absolute;
     left: 0;
@@ -2193,7 +2195,8 @@ ul.menu.nav.catalog {
 
 #block-catalog-menu,
 #block-themostpopulargoods .block-title,
-#block-views-block-top-product-block-3 .block-title {
+#block-views-block-top-product-block-3 .block-title,
+#block-views-block-portfolio-block-1 .block-title {
     background-color: #f07120;
     color: #ffffff;
     padding-left: 47px;
@@ -2208,7 +2211,8 @@ ul.menu.nav.catalog {
 
 #block-catalog-menu:before,
 #block-themostpopulargoods .block-title:before,
-#block-views-block-top-product-block-3 .block-title:before {
+#block-views-block-top-product-block-3 .block-title:before,
+#block-views-block-portfolio-block-1 .block-title:before {
     content: "";
     position: absolute;
     right: 0;
@@ -2298,7 +2302,8 @@ ul.menu.nav.catalog {
   z-index: 999;
   position: fixed;
   /* top: 41px; */
-  padding: 2px 0 10px 0;
+  padding: 0;
   width: 100%;
   background-color: #101010!important;
+  height: 50px;
 }
