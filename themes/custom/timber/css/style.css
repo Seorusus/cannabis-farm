@@ -2307,3 +2307,45 @@ ul.menu.nav.catalog {
   background-color: #101010!important;
   height: 50px;
 }
+
+/** Slick banner */
+.slick--view--top-banner {
+  color: #fff;
+}
+
+.slick--view--top-banner h2.slide__title {
+  font-weight: 700;
+  font-size: 79px!important;
+}
+
+.slick--view--top-banner .views-field-body {
+  font-weight: 500;
+  font-size: 25px!important;
+  margin-top: 20px;
+}
+
+.slick--view--top-banner .views-field-field-subscribe {
+  margin-top: 50px;
+}
+
+.slick--view--top-banner .views-field-field-subscribe a {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  padding: 14px 18px;
+  font-size: 14px;
+  line-height: 1.2;
+  border-radius: 50px;
+  border-width: 2px;
+  font-weight: 700;
+  min-width: 132px;
+  transition: .3s ease-out;
+  border: solid 1px;
+  display: inline-block;
+}
+
+.slick--view--top-banner .views-field-field-subscribe a:hover {
+  color: #585858;
+  background-color: #fff;
+  border-color: #fff;
+}
