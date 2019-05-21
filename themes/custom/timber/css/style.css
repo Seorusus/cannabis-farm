@@ -1691,7 +1691,7 @@ textarea {
     margin-top: 3px;
 }
 #downMenu{
-    float:right;
+    float:left;
 }
 #downMenu li{
     height: 16px;
@@ -2348,4 +2348,37 @@ ul.menu.nav.catalog {
   color: #585858;
   background-color: #fff;
   border-color: #fff;
+}
+
+/** Chat bot */
+.chatpanel-primary>.chatpanel-heading {
+  text-align: left;
+  padding: 4px;
+  color: #fff;
+  background-color: #42B32F;
+  border-color: #42B32F;
+}
+
+.block-drupal-chatbot .text-l  p, .block-drupal-chatbot .text-r  p  {
+  color: #000;
+}
+
+.block-drupal-chatbot button#rec {
+  background-color: #42B32F!important;
+  color: #fff;
+  font-size: 14px;
+}
+
+.block-drupal-chatbot .macro {
+  width: 90%;
+}
+
+.block-drupal-chatbot .text-l input {
+  max-width: 100%;
+  border: 0;
+  background: #E3E3E3;
+  font-size: 13px;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
+  color: #000;
 }
