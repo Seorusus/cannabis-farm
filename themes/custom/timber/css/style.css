@@ -2311,6 +2311,7 @@ ul.menu.nav.catalog {
 /** Slick banner */
 .slick--view--top-banner {
   color: #fff;
+  height: 100vh;
 }
 
 .slick--view--top-banner h2.slide__title {
@@ -2350,6 +2351,11 @@ ul.menu.nav.catalog {
   border-color: #fff;
 }
 
+.slick--skin--fullwidth .slide__media img {
+    width: 100%;
+    height: 100vh;
+}
+
 /** Chat bot */
 .chatpanel-primary>.chatpanel-heading {
   text-align: left;
@@ -2381,4 +2387,8 @@ ul.menu.nav.catalog {
   font-family: 'Roboto', 'sans-serif';
   font-weight: 300;
   color: #000;
+}
+
+.navbar {
+    z-index: 1000;
 }

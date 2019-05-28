@@ -67,6 +67,7 @@ button#rec {
 }
 .innerframe{
     height:450px;
+  display: none;
 }
 .innerframe > div:last-of-type{
     position:absolute;bottom:5px;width:100%;display:flex;
