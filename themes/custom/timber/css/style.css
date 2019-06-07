@@ -2392,3 +2392,30 @@ ul.menu.nav.catalog {
 .navbar {
     z-index: 1000;
 }
+
+.block-search-form-block {
+    width: 200px;
+    float: right;
+}
+
+.block-search-form-block .input-group-btn {
+  display: none;
+}
+
+.block-search-form-block .form-group {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.block-search-form-block .icon {
+  z-index: 1000!important;
+  top: 9px!important;
+  left: 20px!important;
+}
+
+.block-search-form-block .better_search {
+  display: none;
+}
+.headed-nav {
+  float: left;
+}
